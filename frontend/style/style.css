@@ -1,9 +1,17 @@
+:root {
+    --header-bg-color: #f4f2e9;
+    --main-bg-color: #ddd;
+    --nav-bg-color: #495057;
+    --container-bg-color: #eee;
+    --footer-bg-color: #f4f2e9;
+}
+
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: seashell;
+    min-width: 280px;
     margin: 0;
 }
 
@@ -17,49 +25,94 @@ ul {
 }
 
 header {
-    background-color: #f4f2e9;
+    background-color: var(--header-bg-color);
     display: flex;
     justify-content: center;
 }
 
 #header-content {
-    width: 70%;
-    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
+    background-color: var(--nav-bg-color);
 }
 
-nav > ul {
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0px;
+nav ul {
+    color: #ccc;
+}
+nav ul:hover {
+    cursor: default;
+}
+
+nav a{
+    color: #ccc;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #fff;
 }
 
 main {
-    background-color: #eeeeee;
+    background-color: var(--main-bg-color);
     width: 100%;
-    min-height: 600px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
+    padding: 40px 0px;
+    box-sizing: border-box;
 }
 
 .main-container {
-    background-color: #e1e1e1;
+    background-color: var(--container-bg-color);
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 3px 3px 7px black;
+    padding: 20px 0px 40px 0px;
 }
 
 .form-item {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    transition: all ease 0.5s;
+}
+
+.form-item input {
+    width: 100%;
+    height: 20px;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.form-item input[type="file"] {
+    height: auto;
+    padding: 12px 0px;
+}
+
+.form-item label {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-submit {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.form-submit input {
+    width: 100px;
 }
 
 .book-item {
@@ -67,20 +120,18 @@ main {
 }
 
 footer {
-    background-color: #f4f2e9;
+    background-color: var(--footer-bg-color);
     height: 100px;
 }
 
 
 @media screen and (max-width: 420px){
-
-
-    .main-container {
+    #header-content {
         width: 100%;
+        height: 80px;
+        margin: 0px 40px;
     }
-}
 
-@media screen and (min-width: 421px) and (max-width: 750px){
     nav {
         display: flex;
         justify-content: center;
@@ -90,15 +141,89 @@ footer {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        margin: 15px 40px;
+        padding: 0px;
+    }
+
+    .far {
+        color: #ddd;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .form-item {
+        width: 285px;
+    }
+
+    .mobile-display-none {
+        display: none;
+    }
+
+    .desktop-display {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 421px) and (max-width: 770px){
+    #header-content {
+        width: 100%;
+        height: 100px;
+        margin: 0px 40px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+    
+    nav > ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 40px;
         padding: 0px;
     }
    
     .main-container {
         width: 100%;
+        margin: 0px 40px;
+    }
+
+    .book-form {
+        width: 70%;
+    }
+
+    .form-item {
+        width: 330px;
+    }
+
+    .search {
+        align-items: flex-start;
+    }
+
+    #search-bar,
+    #search-author {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .mobile-display {
+        display: none;
+    }
+
+    .desktop-display {
+        display: none;
     }
 }
 
-@media screen and (min-width: 751px){
+@media screen and (min-width: 771px){
+    #header-content {
+        width: 70%;
+        height: 100px;
+    }
+
     nav {
         display: flex;
         justify-content: center;
@@ -110,8 +235,26 @@ footer {
         justify-content: space-between;
         padding: 0px;
     }
-    
+
     .main-container {
         width: 70%;
+    }
+
+    .form-item {
+        width: 400px;
+    }
+
+    .search {
+        align-items: flex-start;
+    }
+
+    #search-bar,
+    #search-author {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .mobile-display {
+        display: none;
     }
 }

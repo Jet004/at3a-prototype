@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
     <script src="interactivity/script.js" defer></script>
     <script src="api/api.js" defer></script>
     <title>Legendary books</title>
@@ -12,8 +13,52 @@
     <header></header>
     <nav></nav>
     <main>
-        books page
+        <section class="main-container">
+            <h1>Manage Books</h1>
 
+            <form action="#" id="book-form"  enctype="multipart/form-data">
+                <div class="form-item search">
+                    <label for="search-bar">Search for a book to edit or delete</label>
+                    <input type="text" name="search-bar" id="search-bar" pattern="[A-Za-z]" placeholder="Enter search term..." maxlength="50">
+                </div>
+                <div class="form-item">
+                    <label for="image">Book Cover</label>
+                    <input type="file" name="image" id="image" maxlength="1000" accept=".jpg, .jpeg, .png">
+                </div>
+                <div class="form-item">
+                    <label for="title">Book Title</label>
+                    <input type="text" name="title" id="title" pattern="[A-Za-z0-9]" placeholder="Enter book title" maxlength="100">
+                </div>
+                <div class="form-item">
+                    <label for="original-title">Original Title</label>
+                    <input type="text" name="original-title" id="original-title" pattern="[A-Za-z]" placeholder="Enter original title" maxlength="50">
+                </div>
+                <div class="form-item search">
+                    <label for="search-author">Search for an author</label>
+                    <input type="text" name="search-author" id="search-author" pattern="[A-Za-z]" placeholder="Enter search term..." maxlength="50">
+                </div>
+                <div class="form-item">
+                    <label for="year-published">Year of Publication</label>
+                    <input type="number" name="year-published" id="year-published" pattern="[0-9]" placeholder="Enter year of publication" minlength="4" maxlength="4">
+                </div>
+                <div class="form-item">
+                    <label for="genre">Genre</label>
+                    <input type="text" name="genre" id="genre" pattern="[0-9]" placeholder="Enter author birth year" minlength="4" maxlength="4">
+                </div>
+                <div class="form-item">
+                    <label for="millions-sold">Millions of Copies Sold</label>
+                    <input type="number" name="millions-sold" id="millions-sold" pattern="[0-9]" placeholder="Enter millions sold" maxlength="5">
+                </div>
+                <div class="form-item">
+                    <label for="language">Original Language</label>
+                    <input type="text" name="language" id="language" pattern="[A-Za-z]" placeholder="Enter original language" maxlength="50">
+                </div>
+                <div class="form-submit">
+                    <input type="submit" value="Add/Update">
+                    <input type="submit" value="Delete">
+                </div>
+            </form>
+        </section>
     </main>
     <footer></footer>
 </body>
