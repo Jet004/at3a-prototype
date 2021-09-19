@@ -1,13 +1,13 @@
 # at3a-prototype
 Prototype front end for Web Based Programs AT3a
 
-*********************************************
+############################################
 
 PRE-REQUISITES:
     - npm install (install dependencies)
     - npm start (start nodemon server)
 
-*********************************************
+############################################
 
 TODO:
 - Create database and database tables
