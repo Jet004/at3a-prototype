@@ -4,6 +4,7 @@ Prototype front end for Web Based Programs AT3a
 ---------------------------------------------
 
 PRE-REQUISITES:
+- git clone https://github.com/Jet004/at3a-prototype.git
 - npm install (install dependencies)
 - npm start (start nodemon server)
 
