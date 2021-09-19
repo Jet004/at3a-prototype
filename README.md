@@ -5,6 +5,7 @@ Prototype front end for Web Based Programs AT3a
 
 PRE-REQUISITES:
 - git clone https://github.com/Jet004/at3a-prototype.git
+- cd at3a-prototype
 - npm install (install dependencies)
 - npm start (start nodemon server)
 
@@ -21,7 +22,7 @@ TODO:
     - PUT, PATCH, DELETE methods in fetch() requests for CRUD operations
 
 - Flesh out functionality tests
-    - Route tests (test return values: get/post/test values)
+    - curl route tests (test return values: get/post/test values)
 
 - Validate forms
     - check for password/email match
