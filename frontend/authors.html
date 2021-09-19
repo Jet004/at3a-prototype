@@ -37,11 +37,11 @@
                 </div>
                 <div class="form-item">
                     <label for="birth-year">Birth Year</label>
-                    <input type="number" name="birth-year" id="birth-year" pattern="[0-9]{4}" placeholder="Enter author birth year" minlength="4" maxlength="4" required>
+                    <input type="number" name="birth-year" id="birth-year" pattern="[0-9]{4}" placeholder="Enter author birth year" minlength="4" maxlength="4" min="0" max="2021" required>
                 </div>
                 <div class="form-item">
                     <label for="death-year">Death Year</label>
-                    <input type="number" name="death-year" id="death-year" pattern="[0-9]{4}" placeholder="Enter year author died" minlength="4" maxlength="4">
+                    <input type="number" name="death-year" id="death-year" pattern="[0-9]{4}" placeholder="Enter year author died" minlength="4" maxlength="4" min="0" max="2021">
                 </div>
                 <div class="form-submit">
                     <input type="submit" value="Add/Update">

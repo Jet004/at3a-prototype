@@ -43,7 +43,7 @@
                 <input type="text" name="author-id" id="author-id" value="" hidden>
                 <div class="form-item">
                     <label for="year-published">Year of Publication</label>
-                    <input type="number" name="year-published" id="year-published" pattern="[0-9]{4}" placeholder="Enter year of publication" minlength="4" maxlength="4" required>
+                    <input type="number" name="year-published" id="year-published" pattern="[0-9]{4}" placeholder="Enter year of publication" minlength="4" maxlength="4" min="0" max="2021" required>
                 </div>
                 <div class="form-item">
                     <!-- TODO: Create as select list -->
@@ -66,7 +66,7 @@
                 </div>
                 <div class="form-item">
                     <label for="language">Original Language</label>
-                    <input type="text" name="language" id="language" pattern="[A-Za-z]" placeholder="Enter original language" maxlength="50" required>
+                    <input type="text" name="language" id="language" pattern="[A-Za-z]{3,50}" placeholder="Enter original language" maxlength="50" required>
                 </div>
                 <div class="form-submit">
                     <input type="submit" value="Add/Update">
